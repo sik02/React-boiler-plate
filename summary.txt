@@ -1,1 +1,31 @@
 bcrypt를 이용해서 비밀번호 암호화 가능
+
+antd 리액트 부트스트랩 사이트 사용
+
+props
+properties의 줄임말
+하나의 부모 컴포넌트와 자식컴포넌트에서 컴포넌트간의 데이터를 주고받을때 이용함
+소통하는 방식이 부모에서 자식으로만 가능함
+자식컴포넌트로 넘어온 값은 바뀔수 없고 부모컴포넌트에서 수정해서 전달해야함
+
+state
+컴포넌트안에서 값이 변경이 가능하고 값이 바뀌면 재랜더링됨
+
+Redux
+state 상태를 관리하는 라이브러리
+최상위 컴포넌트에서 하나의 데이터를 관리하고 자식과 손자 컴포넌트에서도 데이터를 관리할 때
+Redux가 없으면 손자 -> 자식 -> 부모 -> 자식 -> 손자 순서로 데이터를 변경해야함
+Redux는 Store에 저장을 해놓으면 Store에서 가져오고 보내주고의 편리성이 있음
+
+컴포넌트에서 dispatch해서 action -> Reducer -> Store로 전달되고 다시 컴포넌트로 돌아옴
+한방향으로 흐름 unidirectional data flow
+
+Action
+객체 무엇이 일어났는지 설명함, 상태를 알려줌
+
+Reducer
+state가 action으로 인해서 변경점이 있는걸 설명해줌
+이전 state와 action object를 받아서 next state로 return함
+
+Store
+state들을 감싸고 있으며 method를 이용해서 state를 관리함
