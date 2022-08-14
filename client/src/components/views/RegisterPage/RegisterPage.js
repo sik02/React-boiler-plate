@@ -183,9 +183,9 @@ function RegisterPage() {
             type="text"
             value={Name}
             onChange={onChangeName}
-            placeholder="닉네임"
+            placeholder="이름"
           />
-          <NameCheckBtn onClick={onCheckName}>닉네임 중복 확인</NameCheckBtn>
+          <NameCheckBtn onClick={onCheckName}>이름 중복 확인</NameCheckBtn>
           <Input_Email
             type="email"
             value={Email}

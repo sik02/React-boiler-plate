@@ -119,7 +119,3 @@ exports.checkName = async (req, res) => {
     return res.json({ err });
   }
 };
-
-exports.selectGenre = async (req, res) => {
-  
-}
