@@ -1,16 +1,34 @@
 import React from 'react';
-import ReactDOM from "react-dom";
+
+import * as ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-import 'antd/dist/antd.css';
+import { Provider } from  'react-redux';
+// import 'antd/dist/antd.css';
+import { applyMiddleware, createStore } from "redux";
+import promiseMiddleware from 'redux-promise';
+import { composeWithDevTools } from "redux-devtools-extension";
+import ReduxThunk from 'redux-thunk';
+import rootReducer from './_reducers'
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const createStoreWithMiddleware = applyMiddleware(
+  promiseMiddleware, 
+  ReduxThunk
+  )(createStore);
+
+root.render(
+  <Provider
+    store={ createStoreWithMiddleware(rootReducer, composeWithDevTools())}
+  >
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+    
+  </Provider>,
 )
 
 

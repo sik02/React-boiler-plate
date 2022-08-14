@@ -29,3 +29,10 @@ state가 action으로 인해서 변경점이 있는걸 설명해줌
 
 Store
 state들을 감싸고 있으며 method를 이용해서 state를 관리함
+
+redux-thunk
+dispatch한테 function을 받기위해 사용
+
+redux-promise
+distpatch한테 promise를 받아서 사용하기위해 사용
+
