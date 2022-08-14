@@ -19,8 +19,6 @@ app.use(cors());
 
 //router imports
 const userRouter = require("./routes/user");
-
-
 //mongoDB cloud URI
 const uri = process.env.MONGO_URI;
 mongoose
@@ -31,8 +29,6 @@ mongoose
 
 //라우팅 url
 app.use("/api", userRouter);
-
-
 //url 에러
 app.use((req, res, next) => {
   const error = new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
